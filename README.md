@@ -4,6 +4,14 @@ Letterbox for letter admin
 #### 介绍
 信件管理
 
+- 登录页面
+
+  ![871238687-8051301](assets/871238687-8051301.png)
+
+- 主页
+
+  ![3379490864-8051308](assets/3379490864-8051308.png)
+
 #### 技术栈
 主要：后端：Java11、Spring Boot2、Jwt、Spring Security、Mysql、Redis、OSS、Swagger、Lombok、mybatis-plus、
      前端：Vue2、Vue-router、Vuex、JSEncrypt、Axios、Element-ui、Html、Js、Css
