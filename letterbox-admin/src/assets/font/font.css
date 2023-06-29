@@ -1,0 +1,43 @@
+/* 中文字体 */
+@font-face {
+    font-family: 'coki';
+    src: url('coki.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: 'WCF';
+    src: url('WCF.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: 'WF';
+    src: url('WF.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+
+/* 英文字体 */
+@font-face {
+    font-family: 'willion';
+    src: url('willion.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: 'family';
+    src: url('family.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: 'romeobohemian';
+    src: url('romeobohemian.ttf');
+    font-weight: normal;
+    font-size: normal;
+}

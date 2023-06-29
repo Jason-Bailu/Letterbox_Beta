@@ -1,0 +1,35 @@
+package com.dxy.letterboxbackstage.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
+
+/**
+ * @Author: JasonD
+ * @date: 2023/5/9 20:06
+ * @Description: 跨域配置类 解决前后端分离跨域问题
+ */
+@Configuration
+public class CorsConfig {
+    //当前跨域请求最大有效时长，默认1天
+    private static final long MAX_AGE = 24 * 60 * 60;
+
+    private CorsConfiguration buildConfig() {
+        CorsConfiguration corsConfiguration = new CorsConfiguration();
+        corsConfiguration.addAllowedOrigin("*");//访问源地址
+        corsConfiguration.addAllowedHeader("*");//访问源请求头
+        corsConfiguration.addAllowedMethod("*");//访问源请求方法
+        corsConfiguration.setMaxAge(MAX_AGE);
+//        corsConfiguration.setAllowCredentials(true);
+        return corsConfiguration;
+    }
+
+    @Bean
+    public CorsFilter corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", buildConfig());//对接口配置跨域设置
+        return new CorsFilter(source);
+    }
+}
